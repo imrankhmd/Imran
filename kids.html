@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">    
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+
+<body>
+
+        <!---------------------------NIKITA PATEL----------------------------->
+        <div class="nav1">
+            <ul>
+                <a class = "text1" href="women.html"><li>WOMEN</li></a>
+                <a  class = "text2" href="curve.html"><li>CURVE</li></a>
+                <a  class = "text2" href="men.html"><li>MEN</li></a>
+                <a  class = "text2" href="kids.html"><li>KIDS</li></a>
+                <a  class = "text2" href="beauty.html"><li>BEAUTY</li></a>
+                
+                <select  id="btn">
+                    <option value="AE AED">AE AED</option>
+                    <option value="AL ALL L">AL ALL L</option>
+                    <option value="AO AOA Kz">AO AOA Kz</option>
+                    <option value="AU AUD $">AU AUD $</option>
+                    <option value="CA CAD $">CA CAD $"</option>
+                    <option value="CH CHF CHF">CH CHF CHF</option>
+                    <option value="CL CLP $">CL CLP $</option>
+                    <option value="EU EUR">EU EUR</option>
+                    <option value="GB GBP">GB GB</option>
+                    <option value="JP JPY">JP JPY</option>
+                    <option value="KY KYD">KY KYD</option>
+                    
+                  </select>
+            </ul>
+          </div>
+          <div class="nav2">
+              <img id = "img" src = "data:image/png;base64,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"/>
+              
+              <!-- <i class="fas fa-search" style="font-size:48px;color:red;"></i> -->
+              <div class ="icons">
+              <i class="fas fa-search fa-lg"></i>
+              <i class="fas fa-camera fa-lg"></i>
+              <input id = "srch" type = "text" placeholder ="Search..." />
+              </div>
+        
+              <div class = "icon2">
+                <a href="recent.html"><i class="fas fa-eye fa-lg"></i></a>
+                <a href="wishlist.html"><i class="far fa-heart fa-lg"></i></a>
+                <a href="login.html"><i class="far fa-user fa-lg"></i></a>        
+                <a href="cart.html"><i class="fas fa-shopping-bag fa-lg"></i></a>
+              </div>  
+          </div>
+           <!--------------------------NIKITA PATEL----------------------------->
+        
+        <!-- ---------------------------ARADHANA SHUKLA---------------------------------- -->
+        <div class="nav3">
+          <ul>
+            <a  class = "text3" href="women.html"><li> <div class="dropdown"> <select class="none"><option>NEW IN</option></select>  <div class="dropdown-content"> 
+              <ul id="bold">
+              <!-- <a href="dres.html"><li>LATEST DRESSES</li></a> -->
+              <li>Shop All</li><br/> 
+              <li>New Today</li><br/>
+              <li>New This Week</li><br/>
+              <li>Fall Deals</li><br/>
+              <li>Best Sellers</li><br/>
+              <li>Back In Stock</li><br/> 
+              <li>New This Week</li><br/>
+              <li>Coming Soon</li><br/>
+              
+             </ul> 
+             
+              <ul class="one">
+              <li class="head">OCCASIONS</li><br/> 
+              <li>Office Babe</li><br/>
+              <li>Red Carpet</li><br/>
+              <li>Bridal Shop</li><br/>
+              <li>Wedding Guest</li><br/>
+              <li>Club</li><br/>
+              <li>Jet Setter</li><br/>
+             </ul> 
+             <ul class="one">
+              <!-- <a href="dres.html"><li>LATEST DRESSES</li></a> -->
+              <li class="head">TRENDING</li><br/> 
+              <li>Holiday Party Collection</li><br/>
+              <li>Hot Pink</li><br/>
+              <li>Faux Leather</li><br/>
+              <li>Plaid & Flaannel</li><br/>
+              <li>Cozy Collection</li><br/>
+              <li>Iconic Denim</li><br/>
+              <li>Versity Shop</li><br/>
+              <li>White Collection </li><br/>
+              <li>Tall Clothing</li><br/>
+              <li>Influncer Looks</li><br/>
+             </ul> 
+             
+             <ul class="one">
+              <!-- <a href="dres.html"><li>LATEST DRESSES</li></a> -->
+              <li class="head">NOVA ESSENTIALS</li><br/> 
+              <li>Shop Collection</li><br/>
+              <li>$4 Essentials</li><br/>
+              <li>$6 Essentials</li><br/>
+              <li>$8 Essentials</li><br/>
+              <li>$10 Essentials</li><br/>
+              <li>$12 Essentials</li><br/>
+              
+             </ul> 
+             <div class="image">
+                 <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-nova_essentials-jrs_220x.jpg?v=1631909279" alt="">
+                 <h4 class="txt">Shop Nova Essentials</h4>
+             </div>
+           </div></select> </li></a>
+           <a  class = "text3" href="cardigans.html"><li> <div class="dropdown">  <select class="none"><option>SWEATERS</option></select> <div class="dropdown-content"> 
+              <ul id="bold">
+                  <!-- <a href="dres.html"><li>LATEST DRESSES</li></a> -->
+                  <li>Shop All</li><br/> 
+                  <li>Nen In Sweaters</li><br/>
+                  <li>Sweaters Starting at $10</li><br/>
+                  <li>Sale</li><br/>
+                  <li>Plus</li><br/>
+                 </ul> 
+                 
+                  <ul class="one">
+                  <li class="head">SHOP BY STYLES</li><br/> 
+                  <li>Cardigans</li><br/>
+                  <li>Crop Sweaters</li><br/>
+                  <li>Pullovers</li><br/>
+                  <li>Turtle Necks</li><br/>
+                  <li>Sweater Dresses</li><br/>
+                  <li>Sweater Sets</li><br/>
+                 </ul> 
+                  <div class="image">
+                  <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/600x600_Sweaters_42be95ff-973f-4e2c-89c7-63d25d794dbe_220x.jpg?v=1614196571" alt="">
+                  <h4 class="txt">Shop Sweaters</h4>
+                  </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="jeans.html"><li> <div class="dropdown">   <select class="none"><option>JEANS</option></select>   <div class="dropdown-content"> 
+              <ul id="bold">
+        
+                  <li>Shop All</li><br/> 
+                  <li>New In Jeans</li><br/>
+                  <li>FN Favorite Jeans</li><br/>
+                  <li>Jeans Starting at $16</li><br/>
+                  <li>Plus Size Jeans</li><br/>
+                  <li>Tall Jeans</li><br/> 
+                  <li>Recyled Denim</li><br/>
+                  <li>$29.99 & Under Jeans</li><br/>
+                  
+                 </ul> 
+                 
+                  <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Skinny Jeans</li><br/>
+                  <li>Jeggings</li><br/>
+                  <li>Flare & Wide Leg Jeans</li><br/>
+                  <li>Boyfriend Jeans</li><br/>
+                  <li>Mom Jeans</li><br/>
+                  <li>90s Jeans</li><br/>
+                  <li>Bagggy Jeans</li><br/>
+                  <li>Straight Jeans</li><br/>
+                  <li>Bootcut Jeans</li><br/>
+                  <li>Ankle Jeans</li><br/>
+                  <li>Cargo & Utility Jeans</li><br/>
+                 </ul> 
+                 <ul class="one">
+                  <li class="head">MOST WANTED</li><br/> 
+                  <li>High Rise Jeans</li><br/>
+                  <li>Low Rise Jeans</li><br/>
+                  <li>Booty Shaping Jeans</li><br/>
+                  <li>Distress Jeans</li><br/>
+                  <li>Super Stretch Jeans</li><br/>
+                  <li>Denim Shorts </li><br/>
+                  <li>Black Jeans</li><br/>
+                 </ul> 
+                 
+                 <div class="image">
+                     <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-jeans_c9612616-ca42-49b3-b7cd-35017d1e30b6_220x.jpg?v=1634925418" alt="">
+                     <h4 class="txt">Shop Flare & Wide Leg Jeans</h4>
+                 </div>
+            </div></div>   </li></a>
+            <a  class = "text3" href="shoes.html"><li> <div class="dropdown">   <select class="none"><option>SHOES</option></select>   <div class="dropdown-content">       
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New In Shoes</li><br/>
+                  <li>CLear Shoes</li><br/>
+                 </ul> 
+                 
+                  <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Heels</li><br/>
+                  <li>Boots</li><br/>
+                  <li>Booties</li><br/>
+                  <li>Thigh High Boots</li><br/>
+                  <li>Pumps</li><br/>
+                  <li>Sneakers</li><br/>
+                  <li>Wedges</li><br/>
+                  <li>Flat Sandals</li><br/>
+                  <li>Slides</li><br/>
+                  <li>Slippers</li><br/>
+                 </ul>
+                 <ul class="one">
+                  <li class="head">SHOP HEALS BY HEIGHT</li><br/> 
+                  <li>Flatforms</li><br/>
+                  <li>Altra High Heals</li><br/>
+                  <li>High Heals</li><br/>
+                  <li>Mid Heals</li><br/>
+                  <li>Low Heals</li><br/>
+                 </ul> 
+                 <ul class="one">
+                  <li class="head">WHAT'S TRENDING</li><br/> 
+                  <li>Wrap Ups</li><br/>
+                  <li>Special Occasions</li><br/>
+                 </ul> 
+                 
+                 <div class="image">
+                     <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-shoes_5da83a22-06f3-4540-8f3f-291e8741d248_220x.jpg?v=1636158984" alt="">
+                     <h4 class="txt">Shop Boots</h4>
+                 </div>
+            </div></div> </li></a>
+            <a  class = "text3" href="dresses.html"><li> <div class="dropdown">   <select class="none"><option>DRESSES</option></select>   <div class="dropdown-content">       
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New In Dresses</li><br/>
+                  <li>Best Sellers</li><br/>
+                  <li>Holiday Party</li><br/>
+                  <li>Dresses Starting at $6</li><br/>
+                  <li>Snatched</li><br/>
+                  <li>Plus</li><br/>
+                 </ul> 
+                 
+                  <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Mini Dresses</li><br/>
+                  <li>Midi Dresses</li><br/>
+                  <li>Maxi Dresses</li><br/>
+                  <li>Sweater Dresses</li><br/>
+                  <li>Satin Dresses</li><br/>
+                  <li>Sequin Dresses</li><br/>
+                  <li>Shirt Dresses</li><br/>
+                  <li>Ruched Dresses</li><br/>
+                 </ul> 
+                 <ul class="one">
+                  <li class="head">SHOP BY COLOUR</li><br/> 
+                  <li>Black Dresses</li><br/>
+                  <li>White Dresses</li><br/>
+                 </ul>
+                 <ul class="one">
+                  <li class="head">SHOP BY OCCASIONS</li><br/> 
+                  <li>Formal Dresses</li><br/>
+                  <li>Club Dresses</li><br/>
+                  <li>Luxe Dresses</li><br/>
+                  <li>Casual Dresses</li><br/>
+                  <li>Dresses Under $20</li><br/>
+                 </ul> 
+                 <ul class="one">
+                  <li class="head">WEDDING SHOP</li><br/> 
+                  <li>Bridal Shop</li><br/>
+                  <li>Brides Maids</li><br/>
+                  <li>Wedding Guests</li><br/>
+                 </ul> 
+                 
+                 <div class="image">
+                     <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-dresses1_220x.jpg?v=1636159076" alt="">
+                     <h4 class="txt">Shop New in Dresses</h4>
+                 </div>
+            </div></div> </li></a>
+            <a  class = "text3" href="men.html"><li> <div class="dropdown">   <select class="none"><option>TOPS</option></select> <div class="dropdown-content"> 
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New in Tops</li><br/>
+                  <li>Tops Starting at $4</li><br/>
+                  <li>Plus</li><br/>
+                 </ul> 
+                 
+                  <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Body Suits</li><br/>
+                  <li>Graphics</li><br/>
+                  <li>Shirts & Blouses</li><br/>
+                  <li>Fashion Tops</li><br/>
+                  <li>Corsets</li><br/>
+                  <li>Halter Tops</li><br/>
+                  <li>Off Shoulder Tops</li><br/>
+                  <li>One Shoulder Tops</li><br/>
+                  <li>Basic Tops & Body Suits</li><br/>
+                 </ul> 
+                 
+                 <div class="image">
+                     <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-tops_220x.jpg?v=1636158952" alt="">
+                     <h4 class="txt">Shop Shirts & Blouses</h4>
+                 </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="holiday.html"><li> <div class="dropdown">   <select class="none"><option>HOLIDAYS</option></select>  <div class="dropdown-content"> 
+              <ul class="one">
+                  <li class="head">HOLIDAY</li><br/> 
+                  <li>Shop All Holiday Party Dresses</li><br/>
+                  <li>Holiday Party Jumpsuits</li><br/>
+                  <li>Holiday Party Sets</li><br/>
+                  <li>Holiday Party Collection</li><br/>
+                  <li>Editorial</li><br/>
+                 </ul> 
+                 <ul class="one">
+                  <li class="head">GIFT GIVING</li><br/> 
+                  <li>Gifts Under $10</li><br/>
+                  <li>Gifts Under $20</li><br/>
+                  <li>Gifts For Her</li><br/>
+                  <li>Gifts For Him</li><br/>
+                  <li>Christmas Payjama</li><br/>
+                  <li>Holiday Lingerie</li><br/>
+                  <li>Cold Weather Accessories</li><br/>
+                 </ul> 
+                 
+                 <div class="image">
+                     <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-christmas_pajamas_220x.jpg?v=1636159267" alt="">
+                     <h4 class="txt">Nova Holiday</h4>
+                 </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="set.html"><li> <div class="dropdown">   <select class="none"><option>SETS</option></select>  <div class="dropdown-content">
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New in Matching Sets</li><br/>
+                  <li>Holiday Party Sets</li><br/>
+                  <li>Plus</li><br/>
+                 </ul> 
+              <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Pant Sets</li><br/>
+                  <li>Skirt Sets</li><br/>
+                  <li>Short Sets</li><br/>
+                  <li>Sweater Sets</li><br/>
+                  <li>Sets</li><br/>
+                  <li>Office Sets</li><br/>
+                  <li>Long Sets</li><br/>
+                  <li>Biker Short Sets</li><br/>
+                 </ul> 
+                 
+                 <div class="image">
+                     <img  src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-sets_5_220x.jpg?v=1635900092" alt="">
+                     <h4 class="txt">Shop New in Sets</h4>
+                 </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="coat.html"><li> <div class="dropdown">   <select class="none"><option>COATS & JACKETS</option></select>  <div class="dropdown-content">
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New in Jackets</li><br/>
+                  <li>Sale</li><br/>
+                  <li>Plus</li><br/>
+                 </ul>
+              <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Blazers </li><br/>
+                  <li>Coats</li><br/>
+                  <li>Puffer Jackets</li><br/>
+                  <li>Faux Fur Jackets</li><br/>
+                  <li>Sackets</li><br/>
+                  <li>Faux Leather Jackets</li><br/>
+                  <li>Light Weight Jackets</li><br/>
+                  <li>Jean Jackets</li><br/>
+                 </ul> 
+                 
+                 <div class="image">
+                     <img  src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-coats_1_220x.jpg?v=1634158242" alt="">
+                     <h4 class="txt">Shop New in Jackets</h4>
+                 </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="coat.html"><li> <div class="dropdown">   <select class="none"><option>JUMPSUITS</option></select>  <div class="dropdown-content">
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New in Jumpsuits & Rompers</li><br/>
+                  <li>Holiday Party</li><br/>
+                  <li>Plus</li><br/>
+                 </ul>
+              <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Jumpsuits</li><br/>
+                  <li>Rompers</li><br/>
+                 </ul> 
+                 <div class="image">
+                     <img  src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-jumpsuit1_220x.jpg?v=1635900082" alt="">
+                     <h4 class="txt">Shop Jumpsuits</h4>
+                 </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="coat.html"><li> <div class="dropdown">   <select class="none"><option>GRAPHICS</option></select>  <div class="dropdown-content">
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New in Graphics</li><br/>
+                  <li>Trending Graphics</li><br/>
+                  <li>Music & Bands</li><br/>
+                  <li>NBA & NFL</li><br/>
+                  <li>Teady Bears</li><br/>
+                  <li>Novascope</li><br/>
+                 </ul>
+              <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Short Sleeves Graphics</li><br/>
+                  <li>Long Sleeves Graphics</li><br/>
+                 </ul> 
+                 <div class="image">
+                     <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-tees_220x.jpg?v=1631909734" alt="">
+                     <h4 class="txt">Shop Graphics</h4>
+                 </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="coat.html"><li> <div class="dropdown"> <select class="none"><option>BOTTOMS</option></select> <div class="dropdown-content">
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>New in Bottoms</li><br/>
+                  <li>Bottoms Starting at $6</li><br/>
+                  <li>Office Bottoms</li><br/>
+                  <li>Office Bottoms</li><br/>
+                 </ul>
+              <ul class="one">
+                  <li class="head">SHOP BY STYLE</li><br/> 
+                  <li>Pants</li><br/>
+                  <li>Leggings</li><br/>
+                  <li>Skirts</li><br/>
+                  <li>Shorts</li><br/>
+                  <li>Sweatpants</li><br/>
+                  <li>Faux Leather</li><br/>
+                  <li>Jeans</li><br/>
+                  <li>Cargo</li><br/>
+                 </ul> 
+                 <div class="image">
+                     <img  src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-pants_3_220x.jpg?v=1634157991" alt="">
+                     <h4 class="txt">Shop Pants</h4>
+                 </div>
+            </div></div>  </li></a>
+            <a  class = "text3" href="coat.html"><li> <div class="dropdown"> <select class="none"><option>ACTIVE/LOUNGE</option></select>  <div class="dropdown-content">
+              <ul id="bold">
+                  <li>Shop All</li><br/> 
+                  <li>Lounge Sets</li><br/>
+                  <li>Sweatshirts & Joggers</li><br/>
+                  <li>Hoddies & Sweatshirts</li><br/>
+                  <li>Sweatpants</li><br/>
+                  <li>Leggings</li><br/>
+                  <li>Nova Sport</li><br/>
+                 </ul>
+                 <div class="image">
+                     <img src="https://cdn.shopify.com/s/files/1/0293/9277/files/desktop-menu-banner-sweatshirt_220x.jpg?v=1631910072" alt="">
+                     <h4 class="txt">Shop Sweatshirts & Joggers</h4>
+                 </div>
+            </div></div>  </li></a>
+          </ul>
+        </div>
+        
+        <div class="nav4">
+          <marquee behavior="" direction="right"><a href="https://www.fashionnova.com/collections/new"><h3>Use After Pay To Buy Now or later!</h3></a>
+          <a href="https://www.fashionnova.com/pages/track-order"><h3>Track Your Order Here!</h3></a>
+          </marquee>   
+        </div>  
+        <!-- ---------------------------ARADHANA SHUKLA---------------------------------- -->
+   <!-- aditya -->
+   
+ 
+     <div class="poster"> <img class="img" src="kidbanner01.png"></div>
+     <div class="poster"> <img class="img" src="kidbanner02.png"></div>
+     <div class="poster"> <img class="img" src="kidbanner03.png"></div>
+     <div class="poster"> <img class="img" src="kidbanner04.png"></div>
+     
+     <div class="box">
+         <div class="box-item" onclick="onclick="window.location.href=''>
+             <div class="box-item-img"><img class="box-item-img-img" src="https://cdn.shopify.com/s/files/1/0293/9277/files/11.01_Kidsgrid_GirlsTops_250x.jpg?v=1635557131"></div>
+             <div class="btn1 box-item-btn">GIRLS TOPS</div>
+         </div>
+         <div class="box-item">
+             <div class="box-item-img"><img class="box-item-img-img" src="https://cdn.shopify.com/s/files/1/0293/9277/files/11.01_Kidsgrid_GirlsSets_250x.jpg?v=1635557152"></div>
+             <div class="btn1 box-item-btn">GIRLS SETS</div>
+         </div>
+         <div class="box-item">
+             <div class="box-item-img"><img class="box-item-img-img" src="https://cdn.shopify.com/s/files/1/0293/9277/files/11.01_Kidsgrid_BoysTops_250x.jpg?v=1635557175"></div>
+             <div class="btn1 box-item-btn">BOYS TOPS</div>
+         </div>
+         <div class="box-item">
+             <div class="box-item-img"><img class="box-item-img-img" src="https://cdn.shopify.com/s/files/1/0293/9277/files/11.01_Kidsgrid_BoysBottoms_250x.jpg?v=1635557200"></div>
+             <div class="btn1 box-item-btn">BOYS BOTTOMS</div>
+         </div>        
+     </div>
+     
+     <!-- <div class="icon-div">
+       <div class="icons">
+           <div class="icon">
+               <i class="fab fa-facebook"></i>
+           </div>
+           <div class="icon">
+               <i class="fab fa-instagram"></i>
+           </div>
+           <div class="icon">
+               <i class="fab fa-pinterest"></i>
+           </div>
+           <div class="icon"><i class="fab fa-snapchat-ghost"></i></div>
+           <div class="icon">
+               <i class="fab fa-linkedin-in"></i>
+           </div>
+           <div class="icon">
+               <i class="fab fa-youtube"></i>
+           </div>
+       </div>   -->
+  
+     <!-- aditya mishra -->
+    <div class="gram">
+    <div class="gram-text"> <h3>Shop Looks From Our 'Gram For Your Mini Me</h3></div>
+    <div class="gramPics">
+        <div id="a"   >
+            <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/41/18210215050102841/standard_resolution.jpg">
+            <div class=""></div>
+        </div>
+        <div id="b"   >
+            <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/60/17937174400728360/standard_resolution.jpg">
+         </div>
+        <div id="c"   >
+             <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/13/17922500824879313/standard_resolution.jpg">
+        </div>
+        <div id="d"   >
+            <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/29/17943269989617429/standard_resolution.jpg">
+        </div>
+        <div id="e"   >
+            <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/6/18263551876005006/standard_resolution.jpg">
+        </div>
+        <div id="f"   >
+            <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/25/17908329356089225/standard_resolution.jpg">
+        </div>
+        <div id="g"   >
+            <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/23/17906773682267523/standard_resolution.jpg">
+        </div>
+        <div id="h"   >
+            <img class="modelImg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/98/18133087045216998/standard_resolution.jpg">
+        </div>
+    </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer" id="Big-1">
+    
+            <div id="box1">
+             <h1>SHOP FASTER WITH THE APP</h1>
+             <a href="https://apps.apple.com/us/app/fashion-nova/id1367363988">
+                 <img class="appstore" height="50px" width="150px" src="appstorelogo.jpeg"/></a>
+    
+             <a href="https://play.google.com/store/apps/details?id=co.tapcart.app.npQt0DXZpj&hl=en_US&gl=US">
+                 <img class="appstore" height="50px" width="150px" src="playstorelogo.jpg"/></a>
+            </div>
+            <div id="box2">
+             <div class="txt">
+                 <ul>
+                     <li class="bold">GET HELP</li>
+                     <a href="https://www.fashionnova.com/pages/help-center"><li>Help Center</li></a>
+                     <a href="https://www.fashionnova.com/pages/track-order"><li>Track Order</li></a>
+                     <a href="https://www.fashionnova.com/pages/shipping-options"><li>Shipping</li></a>
+                     <a href="https://www.fashionnova.com/pages/return-policy"><li>Returns</li></a>
+                     <a href="https://www.fashionnova.com/pages/contact-us"><li>Contact Us</li></a>
+                 </ul>
+             </div>
+             <div class="txt">
+                <ul>
+                    </a><li class="bold">COMPANY</li>
+                    <a href="https://www.fashionnova.com/pages/careers"><li>Careers</li></a>
+                    <a href="https://www.fashionnova.com/pages/about-us"><li>About</li></a>
+                    <a href="https://www.fashionnova.com/pages/locations"><li>Stores</li></a>
+                    <a href="https://babe.nova-influencer.com/collab"><li>Want to collab?</li></a>
+                </ul>
+             </div>
+             <div class="txt">
+                <ul>
+                    <li class="bold">QUICK LINKS</li>
+                    <a href="https://www.fashionnova.com/pages/size-guide"><li>Size Guide</li></a>
+                    <a href="https://www.fashionnova.com/products/gift-cards"><li>Gift Card</li></a>
+                    <a href="https://www.fashionnova.com/pages/gift-card-balance"><li>Check Gift Card Balance</li></a>
+                </ul>
+             </div>
+            </div>
+            <div id="box3">
+                <h1>SIGN UP FOR DISCOUNTS + UPDATES</h1>
+                <input id="email" type="text" placeholder="EMAIL ADDRESS"/>
+                <button id="btn">></button>
+                <h5>By signing up for email, you agree to Fashion Nova's <a  class="underline" href="https://www.fashionnova.com/pages/terms-of-service">Terms of Service</a>  and <a class="underline" href="https://www.fashionnova.com/pages/privacy-policy">Privacy Policy</a>.</h5>
+                <a href="https://www.instagram.com/fashionnova/"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.tiktok.com/notfound"><i class="fab fa-tiktok fa-lg"></i></a>
+                <a href="https://www.youtube.com/fashionnova"><i class="fab fa-youtube fa-lg"></i></a>
+                <a href="https://www.snapchat.com/add/fashionnova"><i class="fab fa-snapchat-ghost fa-lg"></i></a>
+                <a href="https://www.facebook.com/FashionNova"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="https://www.pinterest.com/fashionnova/"><i class="fab fa-pinterest fa-lg"></i></a>
+            </div>
+            <div id="border"></div>
+            <div class="txtleft">© 2021 Fashion Nova, LLC All Rights Reserved</div>
+            <div class="txtright">
+                <a  class="left" href="https://www.fashionnova.com/pages/promo-terms-and-conditions">Promo T&Cs</a> 
+                <a class="left" href="https://www.fashionnova.com/pages/privacy-policy">Privacy Policy</a> 
+                <a class="left" href="https://www.fashionnova.com/pages/terms-of-service">Terms of Service</a>
+                <a class="left" href="https://www.fashionnova.com/pages/ca-supply-chains-act">CA Supply Chains Act</a>
+                <a class="left" href="https://www.fashionnova.com/pages/privacy-policy#donotsell"> Do Not Sell My Information</a>
+            </div>
+        </div>
+    </footer>
+    
+ </body>
+</html>
+

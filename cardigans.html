@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=<device-width>, initial-scale=1.0"> -->
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+
+    <style>
+        .container{
+            /* border:1px solid red; */
+            height:auto;
+            width:100%;
+        }
+        .box1{
+            /* border:1px solid red; */
+            height:60px;
+            width:100%;
+        }
+        .box2{
+            /* border:1px solid red; */
+            height:150px;
+            width:100%;
+        }
+        #name{
+            display: inline-block;
+            font-size: 12px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 10px;
+        }
+        #name:hover{
+            text-decoration: underline;
+        }
+        a:hover {
+            color: navy;
+        }
+
+        #arrow{
+            display: inline-block;
+            font-size: 13px;
+            color: #2e2e4b;
+            margin-left: 20px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #arrownext{
+            display: inline-block;
+            font-size:13px;
+            color: #2e2e4b;
+            margin-left: 20px;
+        }
+        #heading{
+            text-align: center;
+            font-size: 60px;
+            font-weight: bolder;
+            color: black;
+            width:49vw;
+            margin: 0 auto;
+            font:Arial,sans-serif;
+        }
+        .box3{
+            /* border:1px solid red; */
+            height:auto;
+            width:20%;
+            float:left
+            /* display: inline-block;
+            vertical-align: top; 
+            float:right; */
+        }
+        .box4{
+            /* border:1px solid red; */
+            height:auto;
+            width:79%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            float: right;
+            grid-gap:5px ;
+            /* display: inline-block;
+            vertical-align: top;  */
+            /* margin-left: 30%; */
+            /* position: absolute;
+            margin-bottom: ; */
+        }
+        #pic{
+            width:280px;
+            height:450px;
+            border: 1px solid lightgrey; 
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        #pic:hover{
+            width: 320px;
+            height: 500px;
+
+        }
+        #all{
+            width:280px;
+            height:750px;
+            border: 1px solid white;
+            margin-left: 5px;
+            
+        }
+        p{
+            color: red;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        #imgname{
+            font-size: 12px;
+            color:gray;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #strike{
+            display: inline-block;
+            color:black;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration:line-through;
+        }
+        #Nstrike{
+            display: inline-block;
+            color:red;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+        #mclr{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            background-color: maroon;
+            display: inline-block;
+        }
+
+        #oclr{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            background-color: orangered;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        #cclr{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            background-color: wheat;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        #ctxt{
+            border: 1px solid red;
+            height:20px;
+            width:20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: top;
+        }
+        #all {
+           position: relative;
+           z-index: 1;
+        }
+        #all:hover #hbtn{
+           display:block;
+        }
+        #hbtn{
+            position: absolute;
+            z-index: 2;
+            top: 85px;
+            display: none;
+            left: 35px;
+            background-color: black;
+            color:white;
+            height:50px;
+            width:210px;
+            margin-top:95%;
+        }
+        #color{
+            color: grey;
+            font-size: 15px;
+        }
+        #size{
+            color: black;
+            font-size: 20px;
+        }
+        #icn{
+            position:absolute;
+            margin-top: 5%;
+            margin-left: 90%;
+            width: 40px !important;
+            height: 40px !important;
+        }
+        .fa-heart:hover{
+            color: red;
+        }
+        .Fsize{
+            height: 300px;
+            width: 100%;
+            border: 1px solid yellow;
+            
+        }
+        .Fcolor{
+            height: 300px;
+            width: 100%;
+            border: 1px solid green;
+        }
+        .Fprice{
+            height: 250px;
+            width: 100%;
+            /* border: 1px solid blue; */
+            text-align: center;
+            font-size: 25px;
+            text-decoration: underline;
+            font-family: fantasy;
+            margin-top: 10px;
+        }
+        select{
+           height: 60px;
+           width: 230px;
+           margin-top: 20px;
+           font-size: 20px;
+           text-align: center;
+           color: white;
+           background-color: black;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           border-radius: 40px;
+           /* font-style: italic; */
+           font-family: cursive;
+        }
+        /*---------------------------------------------------------- Footer----------------------------------------------- */
+    
+        #Big{
+         background-color: black;
+         width: 100%;
+         height: 350px;
+         position: absolute;
+         margin-top: 1800px;
+     }
+     #box1{
+         height: 70%;
+         width: 23%;
+         border: 1px solid black;
+         display: inline-block;
+         vertical-align: top;
+         margin-left: 30px;
+     }
+     h1{
+         margin-top: 40px;
+         color: white;
+         font-size: 13px;
+         font-weight: bolder;
+         text-align: left;
+     }
+     .appstore{
+         border: 1px solid white;
+         border-radius: 10px;
+         display: inline-block;
+         /* margin-left: 17px; */
+     }
+     #box2{
+        border: 1px solid black;
+        width: 40%;
+        height: 70%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+     }
+     #box3{
+        border: 1px solid black;
+        width: 30%;
+        height: 70%;
+        display: inline-block;
+        vertical-align: top;
+     }
+     li{
+          list-style: none;
+          margin-bottom: 15px;
+          color: grey;
+        }
+     li:hover{
+         color: white;
+     }
+     a{
+         text-decoration: none;
+         color: grey;
+       }
+       .bold{
+           font-weight: bolder;
+           margin-bottom: 25px;
+           color: white;
+       }
+       .txt{
+           display: inline-block;
+           vertical-align: top;
+           margin-top: 26px;
+           margin-left: 10px;
+       }
+       #email{
+           height: 50px;
+           width: 390px;
+       }
+       #btn{
+           height: 55px;
+           width: 50px;
+       }
+       .popuptext{
+           color: red;
+       }
+       h5{
+           color: grey;
+       }
+       i{
+           color: grey;
+       }
+       i:hover{
+           color: white;
+       }
+       .fa-tiktok{
+           margin-left: 30px;
+       }
+       .fa-youtube{
+           margin-left: 30px;
+       }
+       .fa-snapchat-ghost{
+           margin-left: 30px;
+       }
+       .fa-facebook{
+           margin-left: 30px;
+       }
+       .fa-pinterest{
+           margin-left: 30px;
+      }
+      .underline{
+          text-decoration: underline;
+          color: grey;
+      }
+      .underline:hover{
+          color: white;
+      }
+      .txtleft{
+          color: grey;
+          font-size: 12px;
+          margin-top: 20px;
+          margin-left: 70px;
+          display: inline-block;
+      }
+      .txtright{
+          color: grey;
+          font-size: 12px;
+          margin-top: 20px;
+          margin-left: 580px;
+          display: inline-block;
+      }
+
+      #border{
+          border-top: 1px solid lightgray;
+          width: 95%;
+          margin: auto;
+          margin-top: 30px;
+      }
+      .left{
+          margin-left: 20px;
+          color: grey;
+      }
+      .left:hover{
+          color: white;
+      }
+    
+    </style>
+</head>
+<body> 
+    <footer>
+    <div class="footer" id="Big">
+
+        <div id="box1">
+         <h1>SHOP FASTER WITH THE APP</h1>
+         <a href="https://apps.apple.com/us/app/fashion-nova/id1367363988">
+             <img class="appstore" height="50px" width="150px" src="appstorelogo.jpeg"/></a>
+
+         <a href="https://play.google.com/store/apps/details?id=co.tapcart.app.npQt0DXZpj&hl=en_US&gl=US">
+             <img class="appstore" height="50px" width="150px" src="playstorelogo.jpg"/></a>
+        </div>
+        <div id="box2">
+         <div class="txt">
+             <ul>
+                 <li class="bold">GET HELP</li>
+                 <a href="https://www.fashionnova.com/pages/help-center"><li>Help Center</li></a>
+                 <a href="https://www.fashionnova.com/pages/track-order"><li>Track Order</li></a>
+                 <a href="https://www.fashionnova.com/pages/shipping-options"><li>Shipping</li></a>
+                 <a href="https://www.fashionnova.com/pages/return-policy"><li>Returns</li></a>
+                 <a href="https://www.fashionnova.com/pages/contact-us"><li>Contact Us</li></a>
+             </ul>
+         </div>
+         <div class="txt">
+            <ul>
+                </a><li class="bold">COMPANY</li>
+                <a href="https://www.fashionnova.com/pages/careers"><li>Careers</li></a>
+                <a href="https://www.fashionnova.com/pages/about-us"><li>About</li></a>
+                <a href="https://www.fashionnova.com/pages/locations"><li>Stores</li></a>
+                <a href="https://babe.nova-influencer.com/collab"><li>Want to collab?</li></a>
+            </ul>
+         </div>
+         <div class="txt">
+            <ul>
+                <li class="bold">QUICK LINKS</li>
+                <a href="https://www.fashionnova.com/pages/size-guide"><li>Size Guide</li></a>
+                <a href="https://www.fashionnova.com/products/gift-cards"><li>Gift Card</li></a>
+                <a href="https://www.fashionnova.com/pages/gift-card-balance"><li>Check Gift Card Balance</li></a>
+            </ul>
+         </div>
+        </div>
+        <div id="box3">
+            <h1>SIGN UP FOR DISCOUNTS + UPDATES</h1>
+            <input id="email" type="text" placeholder="EMAIL ADDRESS"/>
+            <button id="btn">></button>
+            <h5>By signing up for email, you agree to Fashion Nova's <a  class="underline" href="https://www.fashionnova.com/pages/terms-of-service">Terms of Service</a>  and <a class="underline" href="https://www.fashionnova.com/pages/privacy-policy">Privacy Policy</a>.</h5>
+            <a href="https://www.instagram.com/fashionnova/"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.tiktok.com/notfound"><i class="fab fa-tiktok fa-lg"></i></a>
+            <a href="https://www.youtube.com/fashionnova"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="https://www.snapchat.com/add/fashionnova"><i class="fab fa-snapchat-ghost fa-lg"></i></a>
+            <a href="https://www.facebook.com/FashionNova"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://www.pinterest.com/fashionnova/"><i class="fab fa-pinterest fa-lg"></i></a>
+        </div>
+        <div id="border"></div>
+        <div class="txtleft">© 2021 Fashion Nova, LLC All Rights Reserved</div>
+        <div class="txtright">
+            <a  class="left" href="https://www.fashionnova.com/pages/promo-terms-and-conditions">Promo T&Cs</a> 
+            <a class="left" href="https://www.fashionnova.com/pages/privacy-policy">Privacy Policy</a> 
+            <a class="left" href="https://www.fashionnova.com/pages/terms-of-service">Terms of Service</a>
+            <a class="left" href="https://www.fashionnova.com/pages/ca-supply-chains-act">CA Supply Chains Act</a>
+            <a class="left" href="https://www.fashionnova.com/pages/privacy-policy#donotsell"> Do Not Sell My Information</a>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>
+<script>
+    
+    // var product = JSON.parse(localStorage.getItem("shoppingBag"));
+    // console.log("product:", product);
+    // showProducts(product);
+
+    // var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+//-------------------------------------Filter Price-------------------------------//
+    function handlePriceSort() {
+        var selected = document.getElementById("sortByPrice").value;
+        console.log("selected: ",selected);
+        if (selected=="low"){
+           product = product.sort(function (a,b) {
+               return a.price1-b.price1;
+           });
+        }
+        if (selected=="high"){
+           product = product.sort(function (a,b) {
+               return b.price1 - a.price1;
+           });
+        }
+        console.log(product);
+        showProducts(product);
+    }
+
+//--------------------------------------Filter Size------------------------------------
+
+function handleSizeSort() {
+        var selected = document.getElementById("sortBySize").value;
+        if (selected=="S"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+           });
+        }
+        if (selected=="M"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? -1 : b.name > b.name ? 1 : 0;
+           });
+        }
+
+        if (selected=="L"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+           });
+        }
+        if (selected=="XL"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? -1 : b.name > b.name ? 1 : 0;
+           });
+        }
+        
+        console.log(product);
+        showProducts(product);
+    }
+
+    //----------------------------------------------Filter Color--------------------------------
+    function handlecolorSort() {
+        var selected = document.getElementById("sortBycolor").value;
+        // console.log("selected: ",selected);
+        if (selected=="cream"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+           });
+        }
+        if (selected=="pink"){
+           product = product.sort(function (a, b) {
+               return a.name > b.name ? -1 : b.name > a.name ? 1 : 0;
+           });
+        }
+        console.log(product);
+        showProducts(product);
+    }
+    //-----------------------------------------------------------------------------------//
+    var product = [
+    {
+        image_url: "https://cdn.shopify.com/s/files/1/0293/9277/products/09-30-21Studio1_CE_KG_14-22-40_39_72919_Burgundy_0624_EH_360x.jpg?v=1633367152",
+        discount: "40% OFF! NO CODE NEEDED 🔥 PRICES AS MARKED",
+        name:"Warm And Fuzzy Cardigan-Tapue",
+        price: "USD 3,100.00",
+        price1: 6100,
+        colour: "Color - Maroon",
+        Size: "S",
+
+    },
+    {
+        image_url:"https://cdn.shopify.com/s/files/1/0293/9277/products/07-15-21Studio3_ME_TB_10-48-41_11_9790WN_Camel_0152_EH_360x.jpg?v=1626737574",
+        discount: "40% OFF! NO CODE NEEDED 🔥 PRICES AS MARKED",
+        name: "Sierra Cardign Set-Taupe",
+        price: "USD $44.99",
+        price1: 5600,
+        colour: "Color - Brown",
+        Size: "L",
+    },
+    {
+        image_url:"https://cdn.shopify.com/s/files/1/0293/9277/products/08-17-20Studio4_BR_CP_11-27_34_W9009_White_52338_JK_360x.jpg?v=1597696025",
+        discount: "40% OFF! NO CODE NEEDED 🔥 PRICES AS MARKED",
+        name: "Running Around Plaid Cardigan - Grey/combo",
+        price: "USD $29.99",
+        price1: 7900,
+        colour: "Color - White",
+        Size: "S",
+    },
+
+    {
+        image_url:"https://cdn.shopify.com/s/files/1/0293/9277/products/10-04-21Studio1_SN_KP_13-09-06_54_9790WN_Mocha_1117_DC_360x.jpg?v=1633465902",
+        discount: "40% OFF! NO CODE NEEDED 🔥 PRICES AS MARKED",
+        name: "Let's Get Going Cardigan Sweater - Mocha",
+        price: "USD $44.99",
+        price1: 8500,
+        colour: "Color - Dark Brown",
+        Size: "L",
+    },
+    
+    
+    {
+       image_url:"https://cdn.shopify.com/s/files/1/0293/9277/products/10-09-19_Studio_3_JP_LE_10-36-29_8__W9009_Camel_P_36160_JD_360x.jpg?v=1570658234",
+        discount:"40% OFF! NO CODE NEEDED 🔥 PRICES  AS MARKED",
+        name: "Never A Dull Moment Cardigan - Camel" ,
+        price: "USD $34.99",
+        price1: 1100,
+        colour: "Color - Nude",
+        Size: "XL",
+    },
+
+    {
+       image_url:"https://cdn.shopify.com/s/files/1/0293/9277/products/10-05-21Studio1_ME_RL_11-13-17_22_9967WH_Mauve_P_1389_PB_360x.jpg?v=1633535069",
+        discount:"40% OFF! NO CODE NEEDED 🔥 PRICES  AS MARKED",
+        name: "So Chic Cardigan - Mauve" ,
+        price: "USD $44.99",
+        price1:  7800,
+        colour: "Color - Pink",
+        Size: "XL",
+    },
+
+    {
+       image_url:"https://cdn.shopify.com/s/files/1/0293/9277/products/10-24-19_Studio_3_RM_ES_10-44-27_17__FL19G838_Nude_0508_NT_360x.jpg?v=1572027706",
+        discount:"40% OFF! NO CODE NEEDED 🔥 PRICES  AS MARKED",
+        name: "Get Your Own Balloon Sleeve Cardigan" ,
+        price: "USD $39.99",
+        price1: 2300,
+        colour: "Color - lightCream",
+        Size: "XL",
+
+    },
+    {
+    image_url:"https://cdn.shopify.com/s/files/1/0293/9277/products/10-10-19_STUDIO_2_MA_KY_10-28-23_10_7720879FN_Taupe_41055_WG_360x.jpg?v=1571441563",
+        discount:"40% OFF! NO CODE NEEDED 🔥 PRICES AS MARKED",
+        name: "Warms Your Heart Sweater Duster - Taupe" ,
+        price: "USD $44.99",
+        price1: 9600,
+        colour: "Color - cream",
+        Size: "M",
+    },
+    ];
+
+  
+
+  var body = document.querySelector("body");
+  var mainDiv = document.createElement("div");
+  mainDiv.setAttribute("class", "container");
+
+  localStorage.setItem("setD",JSON.stringify(product));
+  var myd = JSON.parse(localStorage.getItem("setD"));
+  console.log("myd:", myd);
+
+   var cart = JSON.parse(localStorage.getItem("setD")) || [];
+
+ 
+  var a = document.createElement("div");
+  a.setAttribute("class", "box1");
+
+  var b = document.createElement("div");
+  b.setAttribute("class", "box2");
+
+
+//-----------------------------------------FILTER BOX---------------------------------------------------//
+  var c = document.createElement("div");
+  c.setAttribute("class", "box3");
+  
+  
+  var e = document.createElement("div");
+  e.textContent="Filter Price";
+  e.setAttribute("class", "Fprice");
+
+  var fs = document.createElement("div");
+  fs.setAttribute("class", "fsprice");
+  fs.innerHTML = '<select id="sortByPrice" onchange="handlePriceSort()"> <option value="">Sort By Price</option> <option value="low">low to high</option> <option value="high">high to low</option> </select> '
+  
+  var f = document.createElement("div");
+  f.textContent="Filter Size";
+  f.setAttribute("class", "Fprice");
+
+  var fsz = document.createElement("div");
+  fsz.setAttribute("class", "fsprice");
+  fsz.innerHTML = '<select id="sortBySize" onchange="handleSizeSort()"> <option value="">Sort BY Size</option> <option value="S">S</option>  <option value="M">M</option> <option value="L">L</option>  <option value="XL">XL</option>  </select>';
+
+  var g = document.createElement("div");
+  g.textContent="Filter Color";
+  g.setAttribute("class", "Fprice");
+
+  var fc = document.createElement("div");
+  fc.setAttribute("class", "fsprice");
+  fc.innerHTML = '<select id="sortByColor" onchange="handleColorSort()"> <option value="">Sort BY Color</option> <option value="pink">Pink</option>  <option value="cream">Cream</option> <option value="white">White</option>  <option value="maroon">Maroon</option>  <option value="brown">Brown</option>  </select>';
+
+//--------------------------------------------------------GRID---------------------------------------------------------//
+  var d = document.createElement("div");
+  d.setAttribute("class", "box4");
+
+  var text1 = document.createElement("h1");
+  text1.innerHTML = '<a href = "women.html">WOMEN</a> <STYLE>a {text-decoration: none; color: black;}</STYLE>';
+  text1.setAttribute("id", "name");
+
+  var text2 = document.createElement("h1");
+  text2.textContent = ">";
+  text2.setAttribute("id", "arrow");
+
+  var text3 = document.createElement("h1");
+  text3.textContent = "cardigans & sweater coats";
+  text3.setAttribute("id", "arrownext");
+
+  var text4 = document.createElement("h1");
+  text4.textContent = "CARDIGANS & SWEATER COATS";
+  text4.setAttribute("id", "heading");
+
+  body.append(mainDiv);
+  mainDiv.append(a,b);
+  mainDiv.append(c,d);
+//   e.append(c,d);
+   b.append(text4)
+   a.append(text1,text2,text3);
+   c.append(e,f,g);
+   e.append(fs);
+   f.append(fsz);
+   g.append(fc);
+   showProducts();
+
+  function showProducts(){
+    document.querySelector(".box4").innerHTML = "";
+    
+    product.map(function (item) {
+      var imageDiv = document.createElement("div");
+      imageDiv.setAttribute("id", "all");
+
+      var img = document.createElement("img");
+      img.setAttribute("src", item.image_url);
+      img.setAttribute("id", "pic");
+
+      var icon = document.createElement("div");
+    //   icon.innerHTML = '<a href="Favourite.html"><i class="far fa-heart fa-lg"> </i></a>';
+    icon.innerHTML ='<i class="far fa-heart fa-lg"> </i>';
+      icon.setAttribute("id", "icn");
+    //   icon.addEventListener("click",function() {
+    //       addToWishlist(item);
+    //   });
+
+      var clr = document.createElement("div");
+      clr.setAttribute("id", "clr");
+
+      var marun = document.createElement("div");
+      marun.setAttribute("id", "mclr");
+
+      var orange = document.createElement("div");
+      orange.setAttribute("id", "oclr");
+
+      var cream = document.createElement("div");
+      cream.setAttribute("id", "cclr");
+
+      var ctext = document.createElement("div");
+      ctext.setAttribute("id", "ctxt");
+      ctext.textContent = "+4";
+      
+      var h1 = document.createElement("p");
+      h1.textContent = item.discount;
+
+      var h3 = document.createElement("p");
+      h3.textContent = item.name;
+      h3.setAttribute("id", "imgname");
+
+      var h2 = document.createElement("p");
+      h2.textContent = item.price;
+      h2.setAttribute("id", "strike");
+
+      var h4 = document.createElement("p");
+      h4.textContent = item.price1;
+      h4.setAttribute("id", "Nstrike");
+
+      var h5 = document.createElement("p");
+      h5.textContent = item.colour;
+      h5.setAttribute("id", "color");
+
+      var h6 = document.createElement("p");
+      h6.textContent = item.Size;
+      h6.setAttribute("id", "size");
+
+      var btn = document.createElement("button");
+      btn.textContent = "Add To Bag";
+      btn.setAttribute("id", "hbtn");
+      btn.addEventListener("click",function() {
+          addToCart(item);
+      });
+
+      imageDiv.append(icon,img,btn,h1, h3,h2,h4,h5,h6,clr);
+      clr.append(marun,orange,cream,ctext);
+      d.append(imageDiv)
+    //   mainDiv.append(imageDiv);
+    });
+  }
+
+  function addToCart(item) {
+        console.log(item);
+        cart.push(item);
+        localStorage.setItem("cartItems",JSON.stringify(cart));
+        }
+    
+    document.getElementById("hbtn").addEventListener("click",function(){
+        window.location.href = "checkout.html";
+    });
+     
+    // function addToWishlist(item) {
+    //     console.log(item);
+    //     document.querySelector("icon").style.backgroundcolor="black";
+    // }
+    document.getElementById("icn").addEventListener("click",myFun);
+    function myFun() {
+        document.getElementById("icn").style.color="red";
+        alert("Added To Wishlist");
+    }
+</script>

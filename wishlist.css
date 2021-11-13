@@ -1,0 +1,42 @@
+#textlink{
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.tlink{
+    text-decoration: none;
+    color: black;
+}
+.tlink:hover{
+    color:grey;
+    text-decoration: underline;
+}
+span{
+    margin-left: 20px;
+    color: grey;
+}
+#maintext{
+    width: 100%;
+    height: 500px;
+    border: 1px solid white;
+}
+#recentHeading{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+#recentHeading2{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+#shoppingbutton{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 50px;
+    margin-left: 41%;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+    <div class="cardbox">
+        <div class="left" id="left">
+
+        </div>
+        <div class="right">
+            <div class="checkoutbox" id="checkoutbox">
+                <div class="discountbox">
+                    <input type="text" class="Discount" placeholder="Discount code">
+                    <input type="button" class="btn btnAPPLY" value="APPLY">
+                </div>
+                <div class="apply">
+                <a href="payment.html"><button class="btn btnCHECKOUT" >checkout</button></a>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+
+    // ---------------------------------storage
+
+    var p2_CartArray = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+
+    // --------------------------------------Mainfunctions
+    window.addEventListener("load", () => {
+        displaycart(p2_CartArray);
+
+    })
+    // ====================================DOM manipulation
+
+    var left = document.getElementById("left");
+    function displaycart(p2_CartArray) {
+        p2_CartArray.map(function (item, index) {
+            var cart = document.createElement("div");
+            cart.classList = "cart";
+            cart.id = "cart";
+            cart.innerHTML = `
+            <div class="img" style="background-image: url(${item.image_url});" id="img"></div>
+             <div class="imgcontent" id="imgcontent">
+                <h4>${item.name}</h4>
+                <p>Size: ${item.Size}</p>
+            </div>
+            <div class="counterbox" id="counterbox">
+                <div class="top">
+                   - 1 +
+                </div>
+                 <div class="bottom">Remove</div>
+            </div>
+             <div class="price" id="price">
+                <div class="top">
+                   <p class="grey">$${item.price1}</p> 
+                   <p class="red">$ ${item.price1}</p>
+                </div>
+                 <div class="bottom">Move to Favorites</div>
+                </div>
+            `;
+
+            left.append(cart);
+        })
+    }
+
+</script>
